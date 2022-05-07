@@ -4,6 +4,7 @@
     --light: #fff;
     --copy: #181818;
     --highlight: #3546A6;
+    --highlightDark: #242f70;
 }
 
 $colors: (
@@ -11,6 +12,7 @@ $colors: (
     "light": var(--light),
     "copy": var(--copy),
     "highlight": var(--highlight),
+    "highlightDark": var(--highlightDark),
 );
 
 // Breakpoints

@@ -15,6 +15,23 @@
             padding-bottom: 40px;
             font-size: 48px;
         }
+
+        @include mixins.breakpoint(variables.$lg) {
+            padding-bottom: 50px;
+            font-size: 60px;
+        }
+    }
+
+    &__wrapper {
+        @include mixins.breakpoint(variables.$md) {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            column-gap: 90px;
+        }
+
+        @include mixins.breakpoint(variables.$lg) {
+            grid-template-columns: repeat(4, 1fr);
+        }
     }
 
     &__item {
@@ -26,6 +43,11 @@
             display: flex;
             padding-bottom: 50px;
             margin-bottom: 50px;
+        }
+
+        @include mixins.breakpoint(variables.$md) {
+            flex-direction: column;
+            border-bottom: none;
         }
 
         &:last-of-type {
@@ -42,6 +64,15 @@
             max-width: 200px;
             margin-right: 50px;
         }
+
+        @include mixins.breakpoint(variables.$md) {
+            max-width: 300px;
+            margin-right: 0;
+        }
+
+        @include mixins.breakpoint(variables.$lg) {
+            max-width: 100%;
+        }
     }
 
     &__name {
@@ -52,6 +83,10 @@
 
         @include mixins.breakpoint(variables.$sm) {
             padding: 0 0 11px;
+        }
+
+        @include mixins.breakpoint(variables.$md) {
+            padding: 35px 0 11px;
         }
     }
 
@@ -73,6 +108,10 @@
         @include mixins.breakpoint(variables.$sm) {
             max-height: initial;
         }
+
+        @include mixins.breakpoint(variables.$lg) {
+            max-height: 164px;
+        }
     }
 
     &__link {
@@ -80,5 +119,10 @@
         font-size: 15px;
         font-weight: 500;
         color: map-get(variables.$colors, "highlight");
+        transition: 0.2s;
+
+        &:hover {
+            color: map-get(variables.$colors, "highlightDark");
+        }
     }
 }
