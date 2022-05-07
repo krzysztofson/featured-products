@@ -1,0 +1,60 @@
+@use 'variables';
+@use 'mixins';
+
+.featured-products {
+    padding: 46px 0 136px;
+
+    &__title {
+        padding-bottom: 30px;
+        font-weight: 900;
+        font-size: 32px;
+        line-height: 1.1875;
+        color: map-get(variables.$colors, "dark");
+    }
+
+    &__item {
+        padding-bottom: 40px;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+        margin-bottom: 40px;
+
+        &:last-of-type {
+            padding-bottom: 0;
+            border-bottom: none;
+            margin-bottom: 0;
+        }
+    }
+
+    &__image {
+        box-shadow: 5px 5px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    &__name {
+        padding: 35px 0 11px;
+        font-size: 24px;
+        font-weight: 700;
+        color: map-get(variables.$colors, "copy");
+    }
+
+    &__description {
+        font-size: 17px;
+        line-height: 1.6;
+        color: map-get(variables.$colors, "copy");
+    }
+
+    &__copy {
+        max-height: 164px;
+        margin: 9px 0 14px;
+        font-size: 17px;
+        font-weight: 300;
+        line-height: 1.6;
+        color: map-get(variables.$colors, "copy");
+        overflow: hidden;
+    }
+
+    &__link {
+        display: block;
+        font-size: 15px;
+        font-weight: 500;
+        color: map-get(variables.$colors, "highlight");
+    }
+}
