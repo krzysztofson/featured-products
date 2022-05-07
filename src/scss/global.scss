@@ -5,10 +5,6 @@ body {
     background-color: map-get(variables.$colors, "light");
     color: map-get(variables.$colors, "dark");
     font-family: variables.$font-primary;
-
-    @include mixins.breakpoint(variables.$xs) {
-        color: map-get(variables.$colors, "highlight");
-    }
 }
 
 .container {
