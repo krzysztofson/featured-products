@@ -1,0 +1,23 @@
+@use 'variables';
+@use 'mixins';
+
+body {
+    background-color: map-get(variables.$colors, "light");
+    color: map-get(variables.$colors, "dark");
+    font-family: variables.$font-primary;
+
+    @include mixins.breakpoint(variables.$xs) {
+        color: map-get(variables.$colors, "highlight");
+    }
+}
+
+.container {
+    max-width: 1450px;
+    padding-inline: 40px;
+    margin-inline: auto;
+}
+
+.img-responsive {
+    display: block;
+    max-width: 100%;
+}

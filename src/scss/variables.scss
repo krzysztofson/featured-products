@@ -1,0 +1,23 @@
+// Colors
+:root {
+    --dark: #000;
+    --light: #fff;
+    --copy: #181818;
+    --highlight: #3546A6;
+}
+
+$colors: (
+    "dark": var(--dark),
+    "light": var(--light),
+    "copy": var(--copy),
+    "highlight": var(--highlight),
+);
+
+// Breakpoints
+$xs: 576px;
+$sm: 768px;
+$md: 992px;
+$lg: 1200px;
+
+// Font
+$font-primary: 'Roboto', sans-serif;

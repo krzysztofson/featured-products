@@ -1,5 +1,30 @@
+:root {
+  --dark: #000;
+  --light: #fff;
+  --copy: #181818;
+  --highlight: #3546A6;
+}
+
 body {
-  background-color: red;
+  background-color: var(--light);
+  color: var(--dark);
+  font-family: "Roboto", sans-serif;
+}
+@media (min-width: 576px) {
+  body {
+    color: var(--highlight);
+  }
+}
+
+.container {
+  max-width: 1450px;
+  padding-inline: 40px;
+  margin-inline: auto;
+}
+
+.img-responsive {
+  display: block;
+  max-width: 100%;
 }
 
 /*# sourceMappingURL=/main.77bb5cfd.css.map */
