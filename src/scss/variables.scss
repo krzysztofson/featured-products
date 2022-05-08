@@ -7,6 +7,17 @@
     --highlightDark: #242f70;
 }
 
+// Dark mode
+@media (prefers-color-scheme: dark) {
+    :root {
+        --dark: #fff;
+        --light: #111;
+        --copy: #bbb;
+        --highlight: #4758ca;
+        --highlightDark: #344293;
+    }
+}
+
 $colors: (
     "dark": var(--dark),
     "light": var(--light),
