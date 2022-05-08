@@ -30,7 +30,8 @@
         }
 
         @include mixins.breakpoint(variables.$lg) {
-            margin-inline: -45px;
+            margin-left: -45px;
+            margin-right: -45px;
         }
     }
 
@@ -47,14 +48,15 @@
 
         @include mixins.breakpoint(variables.$md) {
             flex-direction: column;
-            max-width: percentage(math.div(1, 2));
-            padding-inline: variables.$column-padding;
+            width: percentage(math.div(1, 2));
+            padding-left: variables.$column-padding;
+            padding-right: variables.$column-padding;
             border-bottom: none;
         }
 
         @include mixins.breakpoint(variables.$lg) {
             flex-direction: column;
-            max-width: percentage(math.div(1, 4));
+            width: percentage(math.div(1, 4));
             border-bottom: none;
         }
 
@@ -64,7 +66,8 @@
             }
 
             @include mixins.breakpoint(variables.$lg) {
-                padding-inline: variables.$column-padding;
+                padding-left: variables.$column-padding;
+                padding-right: variables.$column-padding;
             }
         }
 
@@ -74,7 +77,8 @@
             }
 
             @include mixins.breakpoint(variables.$lg) {
-                padding-inline: variables.$column-padding;
+                padding-left: variables.$column-padding;
+                padding-right: variables.$column-padding;
             }
         }
 
