@@ -1,5 +1,6 @@
 @use 'variables';
 @use 'mixins';
+@use "sass:math";
 
 .featured-products {
     padding: 46px 0 136px;
@@ -24,13 +25,12 @@
 
     &__wrapper {
         @include mixins.breakpoint(variables.$md) {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            column-gap: 90px;
+            display: flex;
+            flex-wrap: wrap;
         }
 
         @include mixins.breakpoint(variables.$lg) {
-            grid-template-columns: repeat(4, 1fr);
+            margin-inline: -45px;
         }
     }
 
@@ -47,7 +47,35 @@
 
         @include mixins.breakpoint(variables.$md) {
             flex-direction: column;
+            max-width: percentage(math.div(1, 2));
+            padding-inline: variables.$column-padding;
             border-bottom: none;
+        }
+
+        @include mixins.breakpoint(variables.$lg) {
+            flex-direction: column;
+            max-width: percentage(math.div(1, 4));
+            border-bottom: none;
+        }
+
+        &:nth-of-type(odd) {
+            @include mixins.breakpoint(variables.$md) {
+                padding-left: 0;
+            }
+
+            @include mixins.breakpoint(variables.$lg) {
+                padding-inline: variables.$column-padding;
+            }
+        }
+
+        &:nth-of-type(even) {
+            @include mixins.breakpoint(variables.$md) {
+                padding-right: 0;
+            }
+
+            @include mixins.breakpoint(variables.$lg) {
+                padding-inline: variables.$column-padding;
+            }
         }
 
         &:last-of-type {
@@ -97,7 +125,7 @@
     }
 
     &__copy {
-        max-height: 164px;
+        max-height: 160px;
         margin: 9px 0 18px;
         font-size: 17px;
         font-weight: 300;
@@ -110,7 +138,7 @@
         }
 
         @include mixins.breakpoint(variables.$lg) {
-            max-height: 164px;
+            max-height: 160px;
         }
     }
 

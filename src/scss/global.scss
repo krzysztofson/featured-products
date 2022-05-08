@@ -11,10 +11,11 @@ body {
     max-width: 1450px;
     padding-inline: 40px;
     margin-inline: auto;
+    overflow: hidden;
 }
 
 .img-responsive {
     display: block;
     max-width: 100%;
-    height: fit-content;
+    height: auto;
 }
